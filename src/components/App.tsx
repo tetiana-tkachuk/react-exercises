@@ -1,6 +1,9 @@
+import Alert from "./Alert";
 import Book from "./Book";
+import Button from "./Button";
 import Mailbox from "./Mailbox";
 import Product from "./Product";
+import UserMenu from "./UserMenu";
 
 const books = [
   { id: "id-1", name: "JS for beginners" },
@@ -24,6 +27,9 @@ export default function App() {
       />
       <section>
         <div>_ _ _ _ _ _ _</div>
+        <h2>User menu</h2>
+        <UserMenu name="Oscar" />
+
         <h2>Mailbox</h2>
         <Mailbox username="Oscar" messages={[]} unreadMessages={[]} />
       </section>
@@ -31,6 +37,13 @@ export default function App() {
         <h2>Books of the week</h2>
         <div>_ _ _ _ _ _ _</div>
         <Book books={books} />
+
+        <Button variant="primary" text="Login" />
+        <Button variant="secondary" text="Follow" />
+
+        <Alert />
+        <Alert type="success" />
+        <Alert type="error" />
       </section>
     </>
   );

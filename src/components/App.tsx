@@ -1,17 +1,28 @@
-import Alert from "./Alert";
-import Book from "./Book";
-import Button from "./Button";
-import Mailbox from "./Mailbox";
-import Product from "./Product";
-import UserMenu from "./UserMenu";
+import Alert from './Alert';
+import Book from './Book';
+import Button from './Button';
+import ContactsList from './ContactsList';
+import Mailbox from './Mailbox';
+import Product from './Product';
+import UserMenu from './UserMenu';
 
 const books = [
-  { id: "id-1", name: "JS for beginners" },
-  { id: "id-2", name: "React basics" },
-  { id: "id-3", name: "React Query overview" },
+  { id: 'id-1', name: 'JS for beginners' },
+  { id: 'id-2', name: 'React basics' },
+  { id: 'id-3', name: 'React Query overview' },
+];
+
+const contacts = [
+  { id: 'id-1', name: 'Kevin' },
+  { id: 'id-2', name: 'Lucy' },
 ];
 
 export default function App() {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log('Clicked!', event);
+    console.log('Target:', event.target);
+  };
+
   return (
     <>
       <h1>Best selling</h1>
@@ -44,6 +55,11 @@ export default function App() {
         <Alert />
         <Alert type="success" />
         <Alert type="error" />
+
+        <button onClick={handleClick}>Click me!</button>
+      </section>
+      <section>
+        <ContactsList existedContacts={contacts} />
       </section>
     </>
   );

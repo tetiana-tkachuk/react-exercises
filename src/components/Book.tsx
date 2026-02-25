@@ -9,10 +9,12 @@ interface Book {
 
 export default function Book({ books }: BookProps) {
   return (
-    <ul>
-      {books.map((book) => (
-        <li key={book.id}>{book.name}</li>
-      ))}
-    </ul>
+    <>
+      <ul>
+        {books.map(book => (
+          <li key={book.id}>{book.name}</li>
+        ))}
+      </ul>
+    </>
   );
 }

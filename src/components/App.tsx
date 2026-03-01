@@ -2,6 +2,8 @@ import Alert from './Alert';
 import Book from './Book';
 import Button from './Button';
 import ContactsList from './ContactsList';
+import Form from './Form';
+import ActionForm from './ActionForm';
 import Mailbox from './Mailbox';
 import Product from './Product';
 import UserMenu from './UserMenu';
@@ -60,6 +62,10 @@ export default function App() {
       </section>
       <section>
         <ContactsList existedContacts={contacts} />
+      </section>
+      <section>
+        <Form />
+        <ActionForm />
       </section>
     </>
   );
